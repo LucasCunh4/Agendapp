@@ -34,7 +34,7 @@ val codec = Json { prettyPrint = true; encodeDefaults = true; ignoreUnknownKeys 
     val id: String = uid(), val deletedAt: Long = System.currentTimeMillis(),
     val event: Event? = null, val series: Series? = null, val occurrences: List<Event> = emptyList(),
     val eventId: String? = null, val tasks: List<Task> = emptyList()
-) { val title: String get() = event?.title ?: series?.segments?.firstOrNull()?.template?.title ?: tasks.firstOrNull()?.name?.ifBlank { "Etapa" } ?: "Item" }
+) { val title: String get() = event?.title ?: series?.segments?.firstOrNull()?.template?.title ?: occurrences.firstOrNull()?.title ?: tasks.firstOrNull()?.name?.ifBlank { "Etapa" } ?: "Item" }
 @Serializable data class Settings(
     val dark: Boolean = false, val morning: Boolean = true, val morningTime: String = "07:00",
     val evening: Boolean = true, val eveningTime: String = "20:00"

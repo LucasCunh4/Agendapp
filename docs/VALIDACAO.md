@@ -5,7 +5,7 @@ Validação realizada neste ambiente de nuvem em 13/10/2026.
 ## Resultados observados
 
 - `bash scripts/cloud-setup.sh`: executado com sucesso, incluindo instalação/reutilização do SDK, ativação do JDK, configurações locais do proxy e truststore, testes, Lint, compilação e verificação da assinatura.
-- `./gradlew testDebugUnitTest`: **51 testes executados, 0 falhas, 0 erros, 0 ignorados**.
+- `./gradlew testDebugUnitTest`: **52 testes executados, 0 falhas, 0 erros, 0 ignorados**.
 - `./gradlew lintDebug`: **nenhum problema encontrado**, sem baseline ou desativação de verificações.
 - `./gradlew assembleDebug`: sucesso. APK local com 19.480.263 bytes, package `br.com.agendapp`, versão 1.0.0, minSdk 26 e targetSdk 35.
 - `apksigner verify --verbose`: assinatura APK v2 válida. Essa versão de assinatura é adequada ao minSdk 26.
@@ -15,7 +15,7 @@ Validação realizada neste ambiente de nuvem em 13/10/2026.
 SHA-256 do APK produzido nesta execução:
 
 ```
-c51b9d26d01ff46cd9b6a408dcd7ada1f78b697e4283c6d15ba5ad66efab4468
+01a6c78ffee517fcf16aa81870ba17335e448539a82ecb6eaefe82825ad58181
 ```
 
 O hash pode mudar em outra compilação, principalmente porque GitHub Actions aplica seu número de execução ao versionCode. Não se afirma identidade binária entre builds de ambientes diferentes.

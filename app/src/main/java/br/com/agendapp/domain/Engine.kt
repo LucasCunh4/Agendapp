@@ -43,7 +43,7 @@ object Engine {
         val retainedSegments = old.segments.filter { it.from < cutoff }.map {
             it.copy(endExclusive = minOf(it.endExclusive ?: cutoff,cutoff))
         }
-        val oldRule = old.segments.lastOrNull { it.from <= originalDate }?.rule ?: old.segments.first().rule
+        val oldRule = old.segments.lastOrNull { it.from <= originalDate }?.rule ?: old.segments.firstOrNull()?.rule ?: Rule()
         val newSegments = if (rule == null) retainedSegments else {
             validateRule(rule)
             val newStart=maxOf(event.date,cutoff)
