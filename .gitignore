@@ -1,0 +1,11 @@
+.gradle/
+.kotlin/
+**/build/
+local.properties
+*.jks
+*.keystore
+.idea/
+*.iml
+
+# Chave pública de TESTE para atualizar APKs debug; nunca usar em produção.
+!tools/agendapp-debug.keystore
