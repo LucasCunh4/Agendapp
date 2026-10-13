@@ -67,7 +67,7 @@ Notificações e gestos em aparelho físico não são considerados validados ape
 
 ## Compilação por terminal na nuvem
 
-Versões: Gradle 8.13 (Wrapper completo com SHA-256), AGP 8.9.2, Kotlin/Compose compiler 2.1.20, KSP 2.1.20-1.0.32, SDK/build-tools 35, bytecode Java 17. GitHub Actions usa JDK 17; este ambiente pode usar JDK 21.
+Versões: Gradle 8.13 (Wrapper completo com SHA-256), AGP 8.9.2, Kotlin/Compose compiler 2.1.20, KSP 2.1.20-1.0.32, SDK/build-tools 35, bytecode Java 17. GitHub Actions usa JDK 17 e runner Ubuntu 24.04, reutilizando o SDK oficial já instalado no runner; este ambiente pode usar JDK 21.
 
 ```bash
 ./gradlew testDebugUnitTest lintDebug assembleDebug
